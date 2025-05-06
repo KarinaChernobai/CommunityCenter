@@ -1,0 +1,104 @@
+/* Color Variables */
+:root {
+  --main-color: #ff9517;
+  --secondary-color: #c4dcac;
+  --background-color: #fffef8;
+  --dark-bg: #171717;
+  --text-color: #171717;
+  --font-headline: "Concert One", sans-serif;
+  --font-subheading: "Alexandria", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  font-family: var(--font-subheading);
+  color: var(--text-color);
+}
+
+.contact-page {
+  max-width: 1000px;
+  margin: 20px;
+  padding: 0rem;
+}
+
+h1 {
+  font-family: var(--font-headline);
+  font-size: 2.5rem;
+  color: var(--main-color);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contact-grid {
+  display: flex;
+  gap: 2rem;
+}
+
+.contact-info,
+.contact-form {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2,
+.contact-form h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--main-color);
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.contact-info li {
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.map iframe {
+  width: 100%;
+  border-radius: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  padding: 0.8rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+button {
+  margin-top: 1.5rem;
+  padding: 0.8rem;
+  background-color: var(--main-color);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e47f12;
+}
