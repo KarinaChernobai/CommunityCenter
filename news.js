@@ -1,3 +1,5 @@
+import { header, footer } from "./commonHTML.js";
+
 // Add alt here
 class Artcile {
     constructor(title, imgPath, description, text) {
@@ -43,10 +45,17 @@ function displayNews(news, newsList) {
     }
 }
 
+function displayElement(container, html) {
+    container.innerHTML = html; 
+}
+
 async function init(){
     const nav = document.querySelector('.nav-container');
-    const sideMenu = document.querySelector('.side-menu-container');
-    const footer = document.querySelector('.footer-container');
+    // const sideMenu = document.querySelector('.side-menu-container');
+    const footerContainer = document.querySelector('.footer-container');
+
+    displayElement(nav, header);
+    displayElement(footerContainer, footer);
 
     // here import html and draw inside the containers
 
