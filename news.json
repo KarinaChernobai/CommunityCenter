@@ -1,0 +1,22 @@
+{
+    "news": [
+        {
+            "title": "The local priest wins a jackpot",
+            "imgPath": "./images/priest.jpg",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            "text": "article text"
+        },
+        {
+            "title": "Young eco-activist do another demonstartion",
+            "imgPath": "./images/eco-activists.jpg",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            "text": "article text"
+        },
+        {
+            "title": "How to get your kids to do homework",
+            "imgPath": "./images/homework.jpg",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+            "text": "article text"
+        }
+    ]
+}
