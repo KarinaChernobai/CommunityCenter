@@ -3,9 +3,252 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>About - BERN COMMUNITY CENTER</title>
+    <!-- Concert One for headlines, Alexandria for all other text -->
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Alexandria:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-brand: #FF9517;
+            --secondary-brand: #c4dcac;
+            --primary-bg: #fffef8;
+            --secondary-bg: #171717;
+        }
+        html, body {
+            background: var(--primary-bg);
+            color: var(--secondary-bg);
+            font-family: 'Alexandria', sans-serif;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        .header {
+            background: var(--main-brand);
+            padding: 2rem;
+            text-align: center;
+        }
+        .logo {
+            max-width: 200px;
+            margin-bottom: 1rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .section {
+            margin-bottom: 3rem;
+        }
+        .banner {
+            background: var(--secondary-brand);
+            color: var(--secondary-bg);
+            padding: 1rem 2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+            border-radius: 8px 8px 0 0;
+        }
+        .banner:hover {
+            background: var(--main-brand);
+            color: var(--primary-bg);
+        }
+        .banner h2 {
+            margin: 0;
+            font-size: 1.5rem;
+            font-family: 'Concert One', cursive;
+            letter-spacing: 1px;
+        }
+        .banner .arrow {
+            transition: transform 0.3s;
+            font-size: 1.5rem;
+        }
+        .banner.active .arrow {
+            transform: rotate(180deg);
+        }
+        .content {
+            display: none;
+            padding: 2rem;
+            background: var(--primary-bg);
+            border: 2px solid var(--secondary-brand);
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+        }
+        .content-static {
+            display: block;
+            padding: 2rem;
+            background: var(--primary-bg);
+            border: 2px solid var(--secondary-brand);
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+        }
+        .content-static h3 {
+            font-family: 'Alexandria', sans-serif;
+            font-weight: 700;
+            margin-top: 0;
+            color: var(--main-brand);
+        }
+        .content-static p {
+            font-family: 'Alexandria', sans-serif;
+            font-weight: 400;
+            margin-top: 0;
+            color: var(--secondary-bg);
+        }
+
+        .content.active {
+            display: block;
+        }
+        .content h3 {
+            font-family: 'Alexandria', sans-serif;
+            font-weight: 700;
+            margin-top: 0;
+            color: var(--main-brand);
+        }
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+        .staff-card {
+            background: var(--primary-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 2px solid var(--secondary-brand);
+            margin-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .staff-photo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--secondary-brand);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            color: var(--secondary-bg);
+            border: 3px solid var(--main-brand);
+            font-family: 'Concert One', cursive;
+        }
+        .staff-card h3 {
+            font-family: 'Alexandria', sans-serif;
+            font-weight: 700;
+            color: var(--main-brand);
+        }
+        .testimonial {
+            background: var(--primary-bg);
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            border: 2px solid var(--main-brand);
+        }
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--main-brand);
+            margin-top: 1rem;
+            font-family: 'Alexandria', sans-serif;
+        }
+        .footnote {
+            font-family: 'Alexandria', sans-serif;
+            font-weight: 300;
+            font-size: 0.9rem;
+            color: var(--secondary-bg);
+            opacity: 0.7;
+            margin-top: 2rem;
+        }
+    </style>
 </head>
 <body>
-    
+    <header class="header">
+        <img src="Logo/Logo + Wordmark Bern.svg" alt="BERN COMMUNITY CENTER" class="logo">
+    </header>
+    <div class="container">
+        <div class="section">
+            <div class="banner">
+                <h2>Mission & Vision</h2>
+             </div>
+            <div class="content-static">
+                <h3>Our Mission</h3>
+                <p>To create a vibrant, inclusive community space that fosters connection, growth, and well-being for all residents of Bern.</p>
+                <h3>Our Vision</h3>
+                <p>To be the heart of Bern, where people of all ages and backgrounds come together to learn, share, and build a stronger community.</p>
+            </div>
+        </div>
+        <div class="section">
+            <div class="banner">
+                <h2>History</h2>
+            </div>
+            <div class="content-static">
+                <p>Founded in 1985, the BERN COMMUNITY CENTER has been serving our community for over three decades. What started as a small gathering place has grown into a vibrant hub of activity and connection.</p>
+                <p>Throughout the years, we've expanded our facilities and programs to meet the evolving needs of our community, always staying true to our core values of inclusivity and service.</p>
+            </div>
+        </div>
+        <div class="section">
+            <div class="banner" onclick="toggleContent('staff')">
+                <h2>Staff & Volunteers</h2>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="content" id="staff">
+                <div class="staff-grid">
+                    <div class="staff-card">
+                        <div class="staff-photo">JS</div>
+                        <h3>John Smith</h3>
+                        <p>Center Director</p>
+                        <p>15 years of experience in community development</p>
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-photo">SJ</div>
+                        <h3>Sarah Johnson</h3>
+                        <p>Program Coordinator</p>
+                        <p>Specializes in youth and senior programs</p>
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-photo"></div>
+                        <h3>Michael Chen</h3>
+                        <p>Facilities Manager</p>
+                        <p>Ensures our center runs smoothly</p>
+                    </div>
+                    <div class="staff-card">
+                        <div class="staff-photo">★</div>
+                        <h3>Our Volunteers</h3>
+                        <p>We are proud to have over 50 dedicated volunteers who contribute their time and skills to make our community center a success.</p>
+                        <p>From event planning to program support, our volunteers are the backbone of our organization.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="banner" onclick="toggleContent('testimonials')">
+                <h2>Testimonials</h2>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="content" id="testimonials">
+                <div class="testimonial">
+                    <p>"The BERN COMMUNITY CENTER has been a second home to my family. The programs and events have helped us connect with our neighbors and feel more part of the community."</p>
+                    <p class="testimonial-author">- Maria Rodriguez, Community Member</p>
+                </div>
+                <div class="testimonial">
+                    <p>"As a volunteer, I've seen firsthand the positive impact this center has on people's lives. It's truly a special place that brings our community together."</p>
+                    <p class="testimonial-author">- David Thompson, Volunteer</p>
+                </div>
+                <div class="testimonial">
+                    <p>"The youth programs at the center have been instrumental in my children's development. They've made friends, learned new skills, and grown in confidence."</p>
+                    <p class="testimonial-author">- Lisa Chen, Parent</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            const banner = content.previousElementSibling;
+            content.classList.toggle('active');
+            banner.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
