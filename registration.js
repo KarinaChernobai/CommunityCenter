@@ -26,10 +26,13 @@ document
       registrations.push({ eventId, name, email, password, userId });
       localStorage.setItem("registrations", JSON.stringify(registrations));
 
-      localStorage.setItem("currentUserId", userId);
+      localStorage.setItem("userId", userId);
 
       confirmation.textContent = "You have successfully registered!";
       confirmation.style.color = "green";
-      this.reset();
+
+      setTimeout(() => {
+        window.location.href = "eventsPage.html";
+      }, 1000);
     }
   });

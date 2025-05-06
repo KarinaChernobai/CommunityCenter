@@ -12,9 +12,12 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
 
   if (user) {
     if (user.password === password) {
-      localStorage.setItem("currentUserId", user.userId);
+      localStorage.setItem("userId", user.userId);
       message.textContent = "You have successfully logged in!";
       message.style.color = "green";
+      setTimeout(() => {
+        window.location.href = "eventsPage.html";
+      }, 1000);
     } else {
       message.textContent = "Incorrect password.";
       message.style.color = "red";
