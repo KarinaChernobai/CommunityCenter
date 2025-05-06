@@ -26,7 +26,7 @@ async function getNews(path) {
     return data.news.map(article => new Artcile(article.title, article.imgPath, article.description, article.text));
 }
 
-function displayNews(news, newsList) {
+function displayNews(news, newsList, container, contentToHide) {
     for (const article of news) {
         const li = document.createElement('li');
         const img = document.createElement('img');
@@ -36,6 +36,7 @@ function displayNews(news, newsList) {
         const p = document.createElement('p');
         p.textContent = article.description + "...";
         const a = document.createElement('a');
+        a.addEventListener('click', displayArticle.bind(article, container, contentToHide));
         a.setAttribute('href', "#" );
         a.textContent = "Read more";
         
@@ -49,6 +50,21 @@ function displayElement(container, html) {
     container.innerHTML = html; 
 }
 
+function displayArticle(container, contentToHide){
+    const article = this;
+
+    contentToHide.classList.add('hidden');
+    container.classList.remove('hidden');
+
+    const img = document.createElement('img');
+    img.setAttribute('src', article.imgPath );
+    const h1 = document.createElement('h1');
+    h1.textContent = article.title;
+    const p = document.createElement('p');
+    p.textContent = article.text;
+    container.append(img, h1, p);
+}
+
 async function init(){
     const nav = document.querySelector('.nav-container');
     // const sideMenu = document.querySelector('.side-menu-container');
@@ -59,7 +75,8 @@ async function init(){
 
     // here import html and draw inside the containers
 
-    const mainContent = document.querySelector('.main-container');
+    const mainContainer = document.querySelector('.main-container');
+    const articleContainer = document.querySelector('.article-container');
     const newsList = document.getElementById('news-list');
 
     const openBtn = document.getElementById('openPopup');
@@ -81,7 +98,7 @@ async function init(){
 
     try {
         const news = await getNews('./news.json');
-        displayNews(news, newsList);
+        displayNews(news, newsList, articleContainer, mainContainer); // bad practice!!! don't repeat it EVER
         
     } 
     catch (error) {
