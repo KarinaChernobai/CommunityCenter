@@ -2,7 +2,7 @@ export const header = `<header class="hero">
     <img src="images/people.jpg" alt="Community gathering" class="hero-bg">
     <div class="overlay"></div>
     <div class="top-bar">
-      <img src="images/Logo + Wordmark2 Bern.png" alt="Community Center Logo" class="logo">
+      <img src="Logo/Logo + Wordmark2 Bern.png" alt="Community Center Logo" class="logo">
   
       <nav class="main-nav" id="nav">
         <ul>
