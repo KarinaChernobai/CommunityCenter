@@ -1,11 +1,24 @@
 /* Reset & Base */
+:root {
+  --main-color: #ff9517;
+  --secondary-color: #c4dcac;
+  --background-color: #fffef8;
+  --dark-bg: #171717;
+  --text-color: #171717;
+  --font-headline: "Concert One", sans-serif;
+  --font-subheading: "Alexandria", sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  font-family: var(--font-subheading);
+  color: var(--text-color);
   line-height: 1.6;
   color: #333;
 }
