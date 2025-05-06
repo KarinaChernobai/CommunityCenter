@@ -1,0 +1,148 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  .container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 0;
+  }
+  
+  
+/* LOGO + NAV SECTION */
+
+/* HERO HEADER STYLES */
+.hero {
+    background: #B8DAAB no-repeat center center/cover;
+    color: rgb(0, 0, 0);
+    padding: 60px 20px 100px;
+    position: relative;
+  }
+  
+  /* TOP BAR WITH LOGO + NAV */
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: rgba(255, 255, 255, 0.6); /* semi-transparent for contrast */
+  }
+  
+  .logo {
+    width: 80px;
+  }
+  
+  /* NAVIGATION */
+  .main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+  
+  .main-nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background 0.3s;
+  }
+  
+  .main-nav ul li a:hover {
+    background: #F79332;
+    border-radius: 4px;
+  }
+  
+  /* HERO CONTENT */
+  .hero-content {
+    text-align: center;
+    margin-top: 60px;
+  }
+  
+  .hero h1 {
+    font-size: 3em;
+  }
+  
+  .hero p {
+    margin: 20px 0;
+  }
+  
+  .cta-button {
+    background: #F79332;
+    padding: 15px 25px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 2px;
+  }
+  
+  /* Sections */
+  section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  .about p {
+    max-width: 700px;
+    margin: auto;
+  }
+  
+  /* Event */
+  .event-card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-left: 4px solid #F79332;
+  }
+  
+  /* News */
+  .news-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .news-item {
+    flex: 1;
+    min-width: 280px;
+    background: #f2f2f2;
+    padding: 20px;
+  }
+  .link-button {
+    display: inline-block;
+    margin-top: 15px;
+    color: #F79332;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Quick Links */
+  .quick-links {
+    background: #B8DAAB;
+    text-align: center;
+    padding: 30px 0;
+  }
+  .quick-link {
+    margin: 0 15px;
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  /* Footer */
+  .footer {
+    background: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  .footer .social a {
+    color: #B8DAAB;
+    margin: 0 8px;
+    text-decoration: none;
+  }
+  
