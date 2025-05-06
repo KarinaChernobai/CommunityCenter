@@ -2,14 +2,16 @@ export const header = `<header class="hero">
     <img src="images/people.jpg" alt="Community gathering" class="hero-bg">
     <div class="overlay"></div>
     <div class="top-bar">
-      <img src="Logo/Logo + Wordmark2 Bern.png" alt="Community Center Logo" class="logo">
+        <a href="home.html">
+            <img src="Logo/Logo + Wordmark2 Bern.png" alt="Community Center Logo" class="logo">
+        </a>
   
       <nav class="main-nav" id="nav">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="home.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="eventsPage.html">Event</a></li>
-          <li><a href="lokalNews.html">News</a></li>
+          <li><a href="news.html">News</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="profile.html">Profile</a></li>
         </ul>
@@ -21,7 +23,7 @@ export const header = `<header class="hero">
       <p>Discover events, connect with neighbors, and get involved.</p>
       <a href="#events" class="cta-button">Explore Events</a>
     </div>
-</header>`;
+  </header>`;
 
 export const footer = `<footer class="footer"> 
   <div class="container"> 
