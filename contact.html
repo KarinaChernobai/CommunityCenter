@@ -42,10 +42,11 @@
           <div class="contact-form">
             <h2>Send Us a Message</h2>
             <form action="https://formsubmit.co/zamir.loshi@powercoders.org" method="POST">
-                <input type="hidden" name="_subject" value="New contact form submission">
-                <input type="hidden" name="_autoresponse" value="Thank you for your message. We'll get back to you soon!">
-                <input type="hidden" name="_template" value="table">
+                <!-- Yönlendirme ve başarı mesajı için eklemeler -->
+                <input type="hidden" name="_next" value="http://localhost/home.html">
+                <input type="hidden" name="_autoresponse" value="Your message has been received!">
                 
+                <!-- Mevcut form alanlarınız -->
                 <label for="name">Full Name:</label>
                 <input type="text" id="name" name="name" required />
         
@@ -56,21 +57,11 @@
                 <input type="text" id="subject" name="subject" required />
         
                 <label for="message">Message:</label>
-                <textarea
-                    id="message"
-                    name="message"
-                    rows="6"
-                    required
-                ></textarea>
+                <textarea id="message" name="message" rows="6" required></textarea>
         
                 <button type="submit">Send</button>
-                
-                <input type="text" name="_honey" style="display:none">
-                
-                <input type="hidden" name="_captcha" value="true">
             </form>
-        </div>
-      </section>
+        </div>      </section>
     </main>
   </body>
 </html>
